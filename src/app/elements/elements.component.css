@@ -1,0 +1,14 @@
+.element {
+    margin-top: 20px;
+    border-radius: 10px;
+    border-color: red;
+    border-style: solid;
+}
+
+.element-id {
+    text-align: left;
+}
+
+.element-name {
+    text-align: right;
+}

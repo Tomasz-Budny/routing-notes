@@ -1,0 +1,46 @@
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" routerLink="/">Angular-Routing</a>
+
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNav" 
+      aria-controls="navbarNav" 
+      aria-expanded="false" 
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+<!-- 
+    aby zadziałał navbar z hamburger menu musimy:
+     - dodać data-bs-toggle (bez bs było kiedyś, teraz muis być)
+     - dodać w angular.json -> scripts -> taką linijkę:
+     "node_modules/bootstrap/dist/js/bootstrap.bundle.js" -->
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
+            Home</a>
+        </li>
+        <li class="nav-item">
+          <a 
+            class="nav-link" 
+            routerLink="/test"
+            routerLinkActive="active">
+            Test</a>
+        </li>
+        <li class="nav-item">
+            <a 
+              class="nav-link" 
+              routerLink="/elements"
+              routerLinkActive="active">
+              Elements</a>
+          </li>
+      </ul>
+    </div>
+  </nav>

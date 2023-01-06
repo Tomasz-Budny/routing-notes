@@ -1,0 +1,31 @@
+<h1 class="section-title">Home</h1>
+<h3>Routing</h3>
+<p>
+    Routing można bardzo prosto skonfigurować. Wystarczy przy tworzeniu projektu angularowego stworzyć z routingiem a
+    następnie dodać w module app-routing odpowiedni obiekt js (zobacz moduł)
+</p>
+
+<h3>Links</h3>
+<p>Aby linki działały trzeba dodać dyrektywe routerLink=url. Url musi wskazywać ścieżke rekatywną do naszego komponentu. Możemy również podać tablicę wtedy weźmie pierwszy element który pasuje. Trzeba pamiętać, że jest różnica między <b>/route</b> a <b>route</b>. To pierwsze to absolutna ścieżka i działa ona w taki sposób, że dokleja adres do naszego głównego adresu strony internetowej, natomiast drugie to relatywna i dokleja ten adres do adresu na którym jesteśmy</p>
+
+<p>Jeśli chcemy dodać jakiś cssowy styl podczas tego jak jakiś link jest aktywny używamy dyrektywy/atrybutu: <b>routerLinkActive</b> i podajemy w stringu jaką klase ma nałożyć bootstrap po tym jak link będzie aktywny. Problem jaki napotkamy z tym rozwiązaniem jest taki, że angular da status aktywny dla każdej podścieżki więc do tej podstawowej też. Aby tego uniknąć stosujemy routerLinkOptions (zobacz plik ts)</p>
+
+<h3>Navigating pragmatically</h3>
+<p>Chodzi tutaj o nawigowania do różnych podstron za pomocą kodu</p>
+
+<p>przykład:</p>
+
+<button 
+  class="btn btn-primary"
+  (click)="onClick()">
+  Idź do Test
+</button>
+
+<p>metoda <b>this.router.navigate()</b> po za tablica urlów przyjmuje jeszcze jako parametr obiekt jsowy w który możemy określic według czego będzie relatywna.</p>
+
+<H3>Route parameters and query parameters</H3>
+<p>aby przekazać route parameter musimy podać w routingu coś takiego /route/:id. </p>
+
+<p>aby przekazać query parameters (czyli coś takiego: /route?query=1&second=2). Musimy zrobić coś takiego. Podajemy dyrektywe do linku o taką: qeuryParams=query: value}. Jest jeszcze coś takiego jak fragment to możęmy przekazywać przez dyrektywe fragment=''</p>
+
+<p>Jeśli chcemy to zrobić za pomocą metody navigae w kodzie to poprostu dodajemy następny argument do navigate js obiekt który będzie trzymał nasze queryParams</p>

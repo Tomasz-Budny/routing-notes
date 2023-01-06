@@ -1,0 +1,15 @@
+<h1 class="section-title">Elements</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-4 element" *ngFor="let element of elements">
+            <div class="row">
+                <div class="col">
+                    ID: {{ element.id }}
+                </div>
+                <div class="col">
+                    <button [routerLink]="['/elements', element.id]">Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
