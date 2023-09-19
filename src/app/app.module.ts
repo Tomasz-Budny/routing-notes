@@ -9,7 +9,10 @@ import { HeaderComponent } from './header/header.component';
 import { ElementsComponent } from './elements/elements.component';
 import { ElementComponent } from './elements/element/element.component';
 import { NotFoundComponent } from './not-found/not-found.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { GuardTestComponent } from './guard-test/guard-test.component';
+import { TestItemComponent } from './guard-test/test-item/test-item.component';
+import { ConfirmComponent } from './confirm/confirm.component'
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponent,
     ElementsComponent,
     ElementComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    GuardTestComponent,
+    TestItemComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
